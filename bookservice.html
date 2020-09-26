@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service - AutoFix Car Repair Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/homeUser.css">
+    <script src="JS/loggedin.js"></script>
+</head>
+<body>
+    <div class="userHeader">
+        <h1>Auto<i class="fa fa-car"></i>Fix</h1>
+        <ul>
+            <li><a href="javascript:loadOtherPage('bookservice.html')">Book a Service</a></li>
+            <li><a href="javascript:loadOtherPage('feedback.html')">Feedback</a></li>
+            <li><a href="javascript:loadOtherPage('rating.html')">Rating</a></li>
+            <li><a href="javascript:loadOtherPage('forum.html')">Forum</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">Account<i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)">Logged in as @<label id="username">guest</label></a>
+                    <a href="login.html" style="border-radius: 0 0 0 20px;">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="hContainer"></div>
+    <div class="inputBox">
+        <h1>Book a Service</h1>
+        <form action="" name="bookingForm" onsubmit="return submitBooking()" id="formBooking">
+            <div class="verticalCont">
+                <label for="usrName">Full Name</label>
+                <p class="errText" id="errFullName">error</p>
+            </div>
+            <input type="text" name="usrName" id="usrName">
+            <div class="verticalCont">
+                <label for="usrUserName">Email</label>
+                <p class="errText" id="errEmail">error</p>
+            </div>
+            <input type="text" name="usrEmail" id="usrEmail">
+            <div class="verticalCont">
+                <label for="usrUserName">Phone Number</label>
+                <p class="errText" id="errPhoneNumber">error</p>
+            </div>
+            <input type="text" name="usrPhoneNumber" id="usrPhoneNumber">
+            <div class="verticalCont">
+                <label for="usrUserName">Service Category</label>
+                <p class="errText" id="errCategory">error</p>
+            </div>
+            <select name="serviceCategory" id="serviceCategory">
+                <option value="">Choose one</option>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Tire Change">Tire Change</option>
+                <option value="Routine Check-up">Routine Check-up</option>
+                <option value="Tune-up">Tune-up</option>
+                <option value="Repair">Repair</option>
+            </select>
+            <div class="verticalCont">
+                <label for="usrUserName">Car Brand and Model</label>
+                <p class="errText" id="errCarBrand">error</p>
+            </div>
+            <select name="carBrand" id="carBrand">
+                <option value="">Choose one</option>
+                <optgroup label="Toyota">
+                    <option value="Toyota Agya">Agya</option>
+                    <option value="Toyota Calya">Calya</option>
+                    <option value="Toyota Avanza">Avanza</option>
+                    <option value="Toyota Yaris / Vios">Yaris / Vios</option>
+                    <option value="Toyota Corolla Altis">Corolla Altis</option>
+                    <option value="Toyota Camry">Camry</option>
+                    <option value="Toyota Sienta">Sienta</option>
+                    <option value="Toyota Innova">Innova</option>
+                    <option value="Toyota Fortuner">Fortuner</option>
+                    <option value="Toyota Noah / Voxy">Noah / Voxy</option>
+                    <option value="Toyota Alphard / Vellfire">Alphard / Vellfire</option>
+                </optgroup>
+                <optgroup label="Honda">
+                    <option value="Honda Brio">Brio</option>
+                    <option value="Honda Mobilio">Mobilio</option>
+                    <option value="Honda BR-V">BR-V</option>
+                    <option value="Honda Freed">Freed</option>
+                    <option value="Honda Jazz">Jazz</option>
+                    <option value="Honda HR-V">HR-V</option>
+                    <option value="Honda CR-V">CR-V</option>
+                    <option value="Honda Civic">Civic</option>
+                    <option value="Honda Accord">Accord</option>
+                </optgroup>
+                <optgroup label="Mitsubishi">
+                    <option value="Mitsubishi Mirage">Mirage</option>
+                    <option value="Mitsubishi XPander">XPander</option>
+                    <option value="Mitsubishi Pajero Sport">Pajero Sport</option>
+                </optgroup>
+                <optgroup label="Hyundai">
+                    <option value="Hyundai H-1">H-1</option>
+                    <option value="Hyundai Tucson">Tucson</option>
+                    <option value="Hyundai SantaFe">SantaFe</option>
+                </optgroup>
+                <optgroup label="Wuling">
+                    <option value="Wuling Confero">Confero</option>
+                    <option value="Wuling Cortez">Cortez</option>
+                    <option value="Wuling Almaz">Almaz</option>
+                </optgroup>
+            </select>
+            <div class="verticalCont">
+                <label for="usrUserName">Transmission</label>
+                <p class="errText" id="errTransmission">error</p>
+                <div class="verticalStick">
+                    <input type="radio" name="transmission" id="mt">
+                    <label for="mt">Manual</label>
+                    <input type="radio" name="transmission" id="at">
+                    <label for="at">Automatic</label>
+                </div>
+            </div>
+            <div class="verticalCont">
+                <label for="usrUserName">Model Year</label>
+                <p class="errText" id="errModelYear">error</p>
+            </div>
+            <input type="text" name="modelyear" id="modelYear">
+            <div class="verticalCont">
+                <input type="submit" value="Book Service">   
+            </div>         
+        </form>
+    </div>
+    <div class="inputBox" id="serviceBooked">
+        <h1>Service Booked</h1>
+        <div class="accordionHandler" id="accordionHandler">
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - AutoFix Car Repair Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/homeUser.css">
+    <script src="JS/loggedin.js"></script>
+</head>
+<body>
+    <div class="userHeader">
+        <h1>Auto<i class="fa fa-car"></i>Fix</h1>
+        <ul>
+            <li><a href="javascript:loadOtherPage('bookservice.html')">Book a Service</a></li>
+            <li><a href="javascript:loadOtherPage('feedback.html')">Feedback</a></li>
+            <li><a href="javascript:loadOtherPage('rating.html')">Rating</a></li>
+            <li><a href="javascript:loadOtherPage('forum.html')">Forum</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">Account<i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)">Logged in as @<label id="username">guest</label></a>
+                    <a href="login.html" style="border-radius: 0 0 0 20px;">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="hContainer">
+    </div>
+    <div class="inputBox" >
+        <h1>Give your feedback:</h1>
+        <form action="" method="get" onsubmit="return submitFeedback()" id="feedbackForm">
+            <div class="verticalCont">
+                <label for="usrUserName">Service used</label>
+                <p class="errText" id="errCategory">error</span>
+            </div>
+            <select name="serviceCategory" id="serviceCategory">
+                <option value="">Choose one</option>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Tire Change">Tire Change</option>
+                <option value="Routine Check-up">Routine Check-up</option>
+                <option value="Tune-up">Tune-up</option>
+                <option value="Repair">Repair</option>
+            </select>
+            <div class="verticalCont">
+                <label for="usrUserName">Title</label>
+                <p class="errText" id="errTitle">error</span>
+            </div>
+            <input type="text" name="feedTitle" id="feedTitle">
+            <div class="verticalCont">
+                <label for="usrUserName">Feedback</label>
+                <p class="errText" id="errContent">error</span>
+            </div>
+            <textarea name="feedback" id="feedContent" cols="30" rows="10"></textarea>
+            <div class="verticalCont">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div class="inputBox" id="userFeedbacks">
+        <h1>Your Feedbacks</h1>
+        <hr>
+        <div id="feedBackContainer">
+            <div class="verticalCont feedbackPost">
+                <p>Posted on Sunday, ddmmyyyy</p>
+                <p>12:30:35</p>
+            </div>
+            <h2>Feedback Title</h2>
+            <p>by Nicholas Kwan for Oil Change Service</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat ex in dictum dapibus. Nullam vel molestie lorem. Aenean interdum semper orci a luctus. Quisque porttitor magna eu elit facilisis dapibus. Pellentesque ut nulla ut velit tempor accumsan a ac urna. Proin lobortis ligula nec felis facilisis vulputate. Curabitur diam neque, mattis at velit ut, tempus posuere enim. Aliquam erat volutpat. Vestibulum rutrum, nisi a fringilla laoreet, ante quam dapibus magna, a interdum neque mi non justo. Nullam id blandit sapien. Nam luctus facilisis lorem. Nullam bibendum quam gravida aliquet molestie.</p>
+            <hr>
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>

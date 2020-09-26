@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating - AutoFix Car Repair Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/homeUser.css">
+    <script src="JS/loggedin.js"></script>
+</head>
+<body>
+    <div class="userHeader">
+        <h1>Auto<i class="fa fa-car"></i>Fix</h1>
+        <ul>
+            <li><a href="javascript:loadOtherPage('bookservice.html')">Book a Service</a></li>
+            <li><a href="javascript:loadOtherPage('feedback.html')">Feedback</a></li>
+            <li><a href="javascript:loadOtherPage('rating.html')">Rating</a></li>
+            <li><a href="javascript:loadOtherPage('forum.html')">Forum</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">Account<i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)">Logged in as @<label id="username">guest</label></a>
+                    <a href="login.html" style="border-radius: 0 0 0 20px;">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="hContainer"></div>
+    <div class="inputBox">
+        <h1>Rate our service</h1>
+        <p id="ratingDesc">s </p>
+        <form action="" onsubmit="return submitRating()" onreset="document.getElementById('ratingDesc').style.opacity = 0;">
+            <div class="ratingContainer">
+                <input type="radio" name="rating" id="rate1" onclick="rateMeter()">
+                <input type="radio" name="rating" id="rate2" onclick="rateMeter()">
+                <input type="radio" name="rating" id="rate3" onclick="rateMeter()">
+                <input type="radio" name="rating" id="rate4" onclick="rateMeter()">
+                <input type="radio" name="rating" id="rate5" onclick="rateMeter()">
+                <h1>
+                    <label id="star1" for="rate1" class="fa fa-star 1">
+                    </label>
+                    <label id="star2" for="rate2" class="fa fa-star 2">
+                    </label>
+                    <label id="star3" for="rate3" class="fa fa-star 3">
+                    </label>
+                    <label id="star4" for="rate4" class="fa fa-star 4">
+                    </label>
+                    <label id="star5" for="rate5" class="fa fa-star 5">
+                    </label>
+                </h1>
+            </div>
+            <div class="verticalCont">
+                <input type="reset" value="Reset" id="resetButton">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div></div>
+</body>
+</html>

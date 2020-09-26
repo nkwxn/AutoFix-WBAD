@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - AutoFix Car Repair Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/homeUser.css">
+    <script src="JS/loggedin.js"></script>
+</head>
+<body>
+    <div class="userHeader">
+        <h1>Auto<i class="fa fa-car"></i>Fix</h1>
+        <ul>
+            <li><a href="javascript:loadOtherPage('bookservice.html')">Book a Service</a></li>
+            <li><a href="javascript:loadOtherPage('feedback.html')">Feedback</a></li>
+            <li><a href="javascript:loadOtherPage('rating.html')">Rating</a></li>
+            <li><a href="javascript:loadOtherPage('forum.html')">Forum</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">Account<i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)">Logged in as @<label id="username">guest</label></a>
+                    <a href="login.html" style="border-radius: 0 0 0 20px;">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="hContainer"></div>
+    <div class="inputBox">
+        <div class="verticalCont">
+            <h1>Discussion Forum</h1>
+            <button style="margin: 0; font-size: 12pt;" onclick="toggleForm()" id="createCancelPost">Create Post</button>
+        </div>
+        <form action="" id="forumPost" onsubmit="return postForumContent()">
+            <div class="verticalCont">
+                <label for="usrUserName">Forum Title</label>
+                <p class="errText" id="errTitle">error</span>
+            </div>
+            <input type="text" name="feedTitle" id="feedTitle">
+            <div class="verticalCont">
+                <label for="usrUserName">Forum Content</label>
+                <p class="errText" id="errContent">error</span>
+            </div>
+            <textarea name="feedback" id="feedContent" cols="30" rows="10"></textarea>
+            <div class="verticalCont">
+                <input type="submit" value="Post">
+            </div>
+        </form>
+        <hr>
+        <div id="forumPosts">
+            <!-- mulai postingan -->
+            <div class="verticalCont forumPost">
+                <p>Nicholas Kwan</p>
+                <p>Thu 5/6/2020</p>
+            </div>
+            <h1>Masalah pada Aki Toyota Innova Reborn</h1>
+            <p>Halo agan sista, saya punya Innova Reborn tahun 2017 yang sudah tidak pernah dihidupkan selama 1 bulan lebih karena pandemi virus corona yang mengharuskan saya untuk bekerja dari rumah. Pada saat saya ingin menghidupkan kembali mobil tersebut, starter tidak bekerja secara maksimal, yang sepertinya akar masalah nya terdapat pada aki yang sudah habis tenaganya. Apakah ada solusi untuk menghidupkan kembali mobil saya? Terima kasih. </p>
+            <div class="verticalCont forumPost">
+                <a href="javascript:toggleCommentList(0)"><p>View Comments (1)</p></a>
+                <div class="verticalStick">
+                    <a href="javascript:toggleCommentForm(0)"><p><i class="fa fa-comment-o"></i> <span id="btComment">Give a Comment</span></p></a>
+                </div>
+            </div>
+            <hr>
+            <!-- kelar postingan -->
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>

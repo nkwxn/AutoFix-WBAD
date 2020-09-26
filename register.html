@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AutoFix Car Repair Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+    <div class="centerContainer">
+        <div class="brandDesc">
+            <a href="index.html"><h1>Auto<i class="fa fa-car"></i>Fix</h1></a>
+            <p>AutoFix is our one stop solution for car fix is here! Our service includes a car repair, oil changes, battery change, etc. We have may technicians that can help you fixing your car. Our technicians can fix many cars from every makes so you can repair your car with us whatever your car brand is!</p>
+        </div>
+        <div class="inputBox">
+            <h1><a href="login.html"><i class="fa fa-arrow-left back"></a></i> Register</h1>
+            <form name="register" onsubmit="return validateData()">
+                <div class="verticalCont">
+                    <label for="usrName">Full Name</label>
+                    <p class="errText" id="errFullName">error</p>
+                </div>
+                <input type="text" name="usrName" id="usrName">
+                <div class="verticalCont">
+                    <label for="">Email Address</label>
+                    <p class="errText" id="errEmail">error</p>
+                </div>
+                <input type="text" name="usrEmail" id="usrEmail">
+                <div class="verticalCont">
+                    <label for="usrName">Username</label>
+                    <p class="errText" id="errUserName">error</p>
+                </div>
+                <input type="text" name="usrUserName" id="usrUserName">
+                <div class="verticalCont">
+                    <label for="usrPwd">Password</label>
+                    <p class="errText" id="errPwd">error</p>
+                </div>
+                <input type="password" name="usrPwd" id="usrPwd">
+                <div class="verticalCont">
+                    <label for="usrCPwd">Confirm Password</label>
+                    <p class="errText" id="errCPwd">error</p>
+                </div>
+                <input type="password" name="usrCPwd" id="usrCPwd">
+                <div class="verticalCont">
+                    <label for="">Gender</label>
+                    <p class="errText" id="errGender">must be checked</p>
+                    <div class="verticalStick">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="verticalCont">
+                    <label for="">Date of Birth</label>
+                    <p class="errText" id="errDOB">error</p>
+                </div>
+                <input type="date" name="usrDOB" id="usrDOB">
+                <div class="verticalCont">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="JS/register.js"></script>
+</body>
+</html>

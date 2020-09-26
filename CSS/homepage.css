@@ -1,0 +1,110 @@
+body {
+    background-image: url('../images/bgMain.jpeg');
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.centerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.brandDesc {
+    width: 400px;
+    color: white;
+    padding: 20px;
+}
+.brandDesc a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.brandDesc p {
+    text-align: justify;
+}
+.inputBox {
+    background-color: white;
+    color: black;
+    width: 380px;
+    padding: 35px;
+    border-radius: 50px;
+    margin: 20px;
+    margin-left: 0px;
+}
+.inputBox a {
+    color: #5474a3;
+    transition: 0.3s;
+}
+.inputBox a:hover {
+    color: #0000FF
+}
+.inputBox form {
+    display: flex;
+    flex-direction: column;
+}
+.inputBox form input,
+.inputBox form textarea,
+.inputBox form select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+}
+.inputBox form input[type=text],
+.inputBox form input[type=password],
+.inputBox form input[type=number],
+.inputBox form select,
+.inputBox form textarea,
+.inputBox form input[type=date],
+.inputBox form input[type=submit],
+.inputBox form input[type=reset] {
+    border-radius: 10px 0 10px 10px;
+    padding: 10px;
+    border: 3px solid black;
+    width: inherit;
+}
+.inputBox button,
+.inputBox form input[type=submit],
+.inputBox form input[type=reset] {
+    border: 3px solid #5474a3;
+    border-radius: 10px;
+    background-color: white;
+    color: #5474a3;
+    position: relative;
+    width: 170px;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inputBox button:hover,
+.inputBox form input[type=submit]:hover,
+.inputBox form input[type=reset]:hover {
+    background-color: #5474a3;
+    color: white;
+}
+.verticalCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.errText {
+    background-color: red;
+    color: white;
+    padding: 0 5px;
+    margin: 0;
+    opacity: 0;
+}
+.verticalStick {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+hr {
+    border: 1px solid black;
+}
